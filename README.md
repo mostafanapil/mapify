@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
+## download and run localy 
+
+unfortunately you will need to install "yarn" by using this command "npm install -g yarn". for node developing purposes then u can download all packages using "yarn install" command line .
+after that feel free to run our project localy using "npm run start"
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
