@@ -1,0 +1,31 @@
+
+.categories-page {
+  background-color: var(--secondary-bg-color);
+}
+.home {
+  background-image: url(../../../assets/images/page-title.jpg);
+  width: 100%;
+  height: 50vh;
+
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family: var(--main-font);
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.651);
+  width: 100%;
+  height: 100%;
+}
+.header-content {
+  position: absolute;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+.para {
+  font-size: 12px;
+  width: 100%;
+}

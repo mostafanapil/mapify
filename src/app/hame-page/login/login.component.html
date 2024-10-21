@@ -1,0 +1,71 @@
+<div class="body">
+    <div class="container" id="container" #container>
+       <!-- Sign Up Form -->
+       <div class="form-container sign-up" #signUpContainer [class.active]="isSignUpActive">
+           <form>
+               <h1 class="Create-account-h">Create Account</h1>
+                 <!-- Radio buttons for choosing Owner or Guest -->
+               <div class="role-selection align-items-center mb-1">
+                   <label>
+                       <input type="radio" name="role" value="owner" [(ngModel)]="userRole"> Owner
+                   </label>
+                   <label>
+                       <input type="radio" name="role" value="guest" [(ngModel)]="userRole"> Guest
+                   </label>
+               </div>
+       
+               <div class="social-icons">
+                   <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+               </div>
+                
+             
+               <span class="register-span">or use your email for registration</span>
+               <input type="text" placeholder="Name">
+               <input type="email" placeholder="Email">
+               <input type="password" placeholder="Password">
+       
+            
+               <button type="button" class="sign">Sign Up</button>
+               <a href="#" class="Have-account" (click)="onHaveAccountClick($event)">Already Have Account?</a>
+           </form>
+       </div>
+       
+       <!-- Sign In Form -->
+       <div class="form-container sign-in" [class.active]="!isSignUpActive">
+           <form [formGroup]="loginform" (ngSubmit)="logindata(loginform)" >
+               <h1>Sign In</h1>
+               <div class="social-icons">
+                   <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                   <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+               </div>
+               <span class="signin-span">or use your email password</span>
+               <input type="email" placeholder="Email" formControlName="username" required>
+               <input type="password" placeholder="Password" formControlName="password">
+               <a href="#" class="forget-pass">Forget Your Password?</a>
+               <button type="button" id="login" class="sign" (click)="logindata(loginform)"  #login>Sign In</button>
+               <a href="#" class="Create-account" (click)="onCreateAccountClick($event)">Create Account?</a>
+           </form>
+       </div>
+   
+       <!-- Image and Toggle Section -->
+       <div class="toggle-container">
+           <div class="toggle">
+               <div class="toggle-panel toggle-left">
+                   <h1>Welcome Back!</h1>
+                   <p>To keep connected with us, please login with your personal info.</p>
+                   <button type="button" (click)="loginBtn.nativeElement.click()" class="sign2">Sign In</button>
+               </div>
+               <div class="toggle-panel toggle-right">
+                   <h1>Hello</h1>
+                   <p>Enter your personal details and start your journey with us.</p>
+                   <button type="button" id="register" #register (click)="registerBtn.nativeElement.click()" class="sign2">Sign Up</button>
+               </div>
+           </div>
+       </div>
+    </div>
+   </div>

@@ -1,0 +1,133 @@
+/* تحسين مظهر قسم المزايا */
+.amenities-section {
+  margin: 0 auto;
+  text-align: center;
+
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+.amenities-section div {
+  margin: 15px 0;
+}
+/* نهاية تحسين مظهر قسم المزايا */
+
+/* تحسين مظهر الـ checkbox */
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+hr{
+  color: var(--border-color);
+}
+.form-check-input {
+  appearance: none !important;
+  background-color: #222222 !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out !important;
+border: .4px solid var(--border-color);
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 4px !important;
+  position: relative;
+  /* إلغاء الـ box-shadow */
+  box-shadow: none !important;
+  /* إضافة مسافة بين الـ checkbox والنص */
+  margin-right: 10px;
+}
+
+.form-check-input:checked {
+  background-color: var(--main-color) !important;
+  border-color: var(--border-color) !important;
+}
+/* نهاية تحسين مظهر الـ checkbox */
+
+/* تحسين مظهر قائمة الـ select */
+.form-select {
+  background-color: #333;
+  color: white;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+/* نهاية تحسين مظهر قائمة الـ select */
+
+/* تحسين مظهر قسم ساعات العمل */
+.opening-hours-section {
+  background-color: #111111 !important;
+
+  border-radius: 10px;
+
+
+  margin-bottom: 30px;
+}
+
+.opening-hours-section h5 {
+  color: white !important;
+}
+
+.opening-hours-section p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+/* نهاية تحسين مظهر قسم ساعات العمل */
+
+/* تحسينات عامة */
+.container {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.row {
+  background-color: #111111 !important;
+
+  border-radius: 10px;
+  padding: 20px;
+
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: right;
+}
+
+h5 {
+  color: white;
+  font-size: 14px;
+}
+.form-check-label ,label{
+  font-size: 14px;
+}
+
+.firt {
+  width: 96%;
+  color: var(--border-color);
+}
+/* نهاية التحسينات العامة */
+.form-select {
+  background-color: #222222;
+  color: white;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  transition: border-color 0.3s ease; /* تأثير عند تغيير لون الحدود */
+}
+
+.form-select:focus {
+  border-color: var(--main-color); /* لون الحدود عند التركيز */
+  outline: none; /* إزالة الإطار الافتراضي */
+}

@@ -1,0 +1,329 @@
+/* :host {
+  width: 100%;
+} */
+:host {
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gbr-book-list-section {
+  width: 100% !important;
+  background: #222222;
+  border-radius: 10px;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+.profile_edit_box {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+.profile_edit_box--header {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_edit_header {
+  background: var(--secondary-bg-color);
+  width: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.profile_edit_header_date {
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.profile_edit_header_date-text {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  padding: 0.3rem;
+  padding-right: 0.6rem;
+  border-right: 2px solid var(--border-color);
+}
+
+.profile_edit_header--title {
+  padding: 1rem;
+  font-size: inherit;
+  border-right: 3px solid var(--border-color);
+  margin-right: auto;
+}
+
+.profile_edit_form {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.profile-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_responsive-width {
+  max-width: 93.75rem;
+  padding: 1.6rem 1.2rem;
+  width: 100%;
+}
+
+.gbr_btn {
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: 0.3s background-color;
+}
+.gbr_btn:hover {
+  background: var(--secondary-bg-color);
+}
+
+.gbr_btn_header {
+  background-color: var(--third-bg-color);
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  margin-right: 0.2rem;
+}
+
+.u-text-main {
+  color: var(--main-color) !important;
+}
+
+.profile_edit_personal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile_edit {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+@media (max-width: 61.875em) {
+  .profile_edit {
+    /* 990px */
+    flex-direction: column;
+  }
+}
+.profile_edit_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profile_edit_container {
+  width: 100%;
+  background-color: var(--secondary-bg-color);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.profile_edit_container_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.profile_edit_container_header--text {
+  font-size: 0.9rem;
+}
+.profile_edit_container_header span {
+  width: 20px;
+  height: 7px;
+  border-radius: 10rem;
+  background: var(--main-color);
+  position: relative;
+  display: block;
+}
+.profile_edit_container_header span::after {
+  content: "";
+  width: 15px;
+  height: 7px;
+  border-radius: 10rem;
+  background: var(--third-bg-color);
+  position: absolute;
+  left: -90%;
+  top: 0;
+}
+.profile_edit_container--2 {
+  height: 100%;
+}
+.profile_edit_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.profile_edit_form_control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.profile_edit_form_control--input {
+  width: 100%;
+  background-color: var(--third-bg-color);
+  outline: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s;
+  color: var(--text-color);
+}
+.profile_edit_form_control--input::placeholder {
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-size: 0.7rem;
+}
+.profile_edit_form_control--input:focus {
+  border-color: var(--main-color);
+}
+.profile_edit_form_control--label {
+  position: absolute;
+  left: 15px;
+  top: 17.5px;
+}
+.profile_edit_photo-box {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-image: url("../../../assets/images/background_upload.jpeg");
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: none;
+}
+.profile_edit_photo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.profile_edit_photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gbr_btn_form {
+  align-self: start;
+  padding: 1rem 3rem;
+  background: var(--third-bg-color);
+  outline: none;
+  border: 1px solid var(--border-color);
+  font-size: 0.7rem;
+  color: var(--text-color);
+  transition: 0.3s all;
+  text-transform: uppercase;
+}
+.gbr_btn_form:hover {
+  border-color: #000;
+  background: var(--main-color);
+  color: #000;
+}
+.gbr_btn-upload {
+  font-size: 0.7rem;
+  margin-left: 2rem;
+  display: inline-block;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: none;
+  text-transform: capitalize;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.gbr_btn-upload:hover {
+  background: var(--main-color);
+  color: black;
+}
+.gbr_btn-remove {
+  margin-left: auto;
+  padding: 0.4rem 0.6rem;
+  background-color: var(--main-color);
+}
+.gbr_btn-remove i {
+  color: #fff;
+  transition: 0.3s color;
+}
+.gbr_btn-remove:hover > i {
+  color: var(--main-color);
+}
+.gbr_btn-eye {
+  background: transparent;
+  margin-left: -2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* big laptop */
+/* 1550px */
+@media (max-width: 96.875em) {
+  .container_responsive-width {
+    max-width: 80rem;
+  }
+}
+@media (max-width: 1200px) {
+  .container_responsive-width {
+    max-width: 64rem;
+    margin: 0 1rem;
+  }
+}
+
+/* tab-port */
+@media (max-width: 61.875em) {
+  /* 990px */
+  .container_responsive-width {
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 125em) {
+  /* 2000px */
+  .container_responsive-width {
+    /* 1800px */
+    max-width: 112.5rem;
+  }
+}
+
+i {
+  color: var(--main-color);
+}
+
+@media (max-width: 990px) {
+  .content {
+    width: 100%;
+  }
+  .profile_Nav_component {
+    width: 100%;
+  }
+}

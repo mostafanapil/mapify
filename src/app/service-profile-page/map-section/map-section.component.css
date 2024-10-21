@@ -1,0 +1,134 @@
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+ 
+}
+
+
+.container {
+    max-width: 1000px;
+
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* تأكد من أن المجموعة تأخذ العرض الكامل */
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none !important;
+}
+
+.custom-button {
+    background-color: var(--main-color) !important;
+    color: #ffffff;
+    border-radius: 8px;
+}
+.card-start {
+    font-size: 15px;
+  }
+  .category-list-item {
+    font-size: 12px;
+    background-color: var(--fourth-bg-color);
+    padding: 5px 12px;
+    margin-right: 4px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .category-list-item:hover {
+    color: var(--main-color) !important;
+  }
+  .hr3 {
+    color: #eeeeee73 !important;
+  }
+  .line1,
+  .line2 {
+    border-radius: 20px;
+    width: 18px;
+    height: 8px;
+  }
+  .line1 {
+    background-color: #eeeeee3e;
+    width: 12px;
+  }
+  .line2 {
+    background-color: var(--main-color);
+  }
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* السماح بالتفاف العناصر */
+}
+
+.flex-fill {
+    flex: 1 1 30%; /* السماح للنمو في العرض مع تحديد الحد الأدنى */
+    margin-right: 10px; /* مسافة بين الحقول */
+    min-width: 100px; 
+    margin-bottom: 10px;/* تحديد الحد الأدنى للعرض */
+}
+
+input.form-control {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: #222222;
+    color: #ffffff;
+    height: 50px;
+    border-radius: 10px;
+}
+
+input {
+    color: white;
+   font-size: 13px;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+
+.btn-direction {
+    background-color: var(--main-color);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.btn-direction:hover {
+    background-color: #08b1a078;
+}
+
+.btn-direction {
+    display: flex; /* تجعل الزر عبارة عن حاوية مرنة */
+    align-items: center; /* محاذاة العناصر العمودية */
+}
+
+.btn-direction i {
+    margin-left: 5px; /* مسافة بين الأيقونة ونص الزر */
+}
+
+/* وسائل الإعلام لجعل التصميم استجابة */
+@media (max-width: 768px) {
+    .flex-fill {
+        flex: 1 1 100%; /* كل عنصر يأخذ عرض 100% في الشاشات الصغيرة */
+        margin-right: 0; /* إزالة المسافة الجانبية */
+        margin-bottom: 10px; /* إضافة مسافة أسفل العناصر */
+    }
+
+    .btn-direction {
+        width: 100%; /* جعل زر الاتجاه يأخذ العرض الكامل */
+        margin-left: 0; /* إزالة الهامش الأيسر */
+    }
+}

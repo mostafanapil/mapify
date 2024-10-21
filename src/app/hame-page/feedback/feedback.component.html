@@ -1,0 +1,44 @@
+<div  id="section1" class="container" >
+    <div class="text-center header">
+      <h5>WHAT SAID ABOUT US</h5>
+      <h1>Testimonials and clients</h1>
+    </div>
+  
+    <div class="slider-container position-relative ">
+      <!-- Carousel Component -->
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <div class="feedcard">
+            <div class="top-card d-flex align-items-center">
+              <img src="{{ slide.img }}"  alt="">
+              <!-- Display only one name -->
+              <div
+              class="card-start text-capitalize d-flex align-items-center justify-content-between w-100"
+            >
+              <span class="cat-title">{{ names[slides.indexOf(slide)].person }}</span>
+              <div class="lines d-flex align-items-center">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            </div>
+                        <hr class="w-100 hr3" />
+
+            <div class="card-content">
+              <p>{{ comments[slides.indexOf(slide)].comment }}</p>
+              <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#08b1a1" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z" />
+              </svg>
+            </div>
+            <div class="card-footer">
+              <a href="">Via X-twitter</a>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+  
+      <!-- Custom navigation buttons -->
+      <button class="prev" (click)="slickModal.slickPrev()"><i class="fas fa-caret-left"></i></button>
+      <button class="next" (click)="slickModal.slickNext()"><i class="fas fa-caret-right"></i></button>
+    </div>
+</div>

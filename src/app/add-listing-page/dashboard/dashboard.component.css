@@ -1,0 +1,424 @@
+/*! dashboard */
+:host {
+  width: 100%;
+}
+.dashboard {
+  /* background-color: var(--secondary-bg-color); */
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+.dashboard .secondry-nav {
+  background-color: var(--secondary-bg-color);
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dashboard .secondry-nav .nav-tit {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 13px;
+  padding: 15px 20px;
+  transition: 0.2s;
+  border-right: 1px solid var(--border-color);
+}
+
+.dashboard .secondry-nav .date {
+  right: 20px !important;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 13px;
+  padding: 15px 20px;
+  transition: 0.2s;
+}
+
+.dashboard .secondry-nav span {
+  border-right: 1px solid var(--border-color);
+}
+
+.dashboard .secondry-nav i {
+  color: var(--main-color);
+  font-size: 13px;
+}
+
+.dashboard .secondry-nav .nav-tit:hover,
+.dashboard .secondry-nav .date:hover {
+  color: var(--main-color);
+}
+.stat h5 {
+  font-size: 18px;
+}
+.dashboard .stat {
+  background-image: url(../../../assets/images/wave.jpg);
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  /* object-fit: cover !important; */
+  height: 150px;
+  width: 326px;
+  padding: 20px;
+  color: var(--text-color) !important;
+  border-radius: 5% !important;
+}
+
+.dashboard .stat span {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.dashboard .stat i {
+  color: var(--main-color);
+  background-color: var(--third-bg-color);
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.Box {
+  position: relative;
+  background-image: url(../../../assets/images/free-photo-of-woman-pointing-at-map.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 280px;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  border-radius: 10px;
+}
+
+.Box .Text {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+margin: 0 !important;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 10px;
+}
+
+.Box p {
+  padding: 10px;
+  width: 300px;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-color);
+}
+
+.dashboard .Box button {
+  background-color: var(--third-bg-color) !important;
+  color: var(--text-color);
+  font-size: 13px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.dashboard .Box button i {
+  color: var(--secondary-bg-color) !important;
+  transition: 0.3s;
+}
+
+.dashboard .Box button:hover {
+  background-color: var(--fourth-bg-color) !important;
+  color: var(--main-color);
+}
+
+/* activity */
+.act{
+  padding-right: 10px !important;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: #111111;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.icon {
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.icon i {
+  color: #fff;
+  font-size: 16px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.date {
+  color: #999;
+  font-size: 12px;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.close-btn i {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.card-start {
+  font-size: 15px;
+}
+
+.hr3 {
+  color: #eeeeee73 !important;
+}
+
+.line1,
+.line2 {
+  border-radius: 20px;
+  width: 18px;
+  height: 8px;
+}
+
+.line1 {
+  background-color: #eeeeee3e;
+  width: 12px;
+}
+
+.line2 {
+  background-color: var(--main-color);
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+/* Last Activities Section */
+.last-activities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  color: #fff;
+}
+
+.last-activities h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Line Styles */
+.lines {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* المسافة بين الخطوط */
+}
+
+.line1,
+.line2 {
+  border-radius: 20px;
+  height: 8px;
+}
+
+.line1 {
+  background-color: #eeeeee3e;
+  width: 12px;
+}
+
+.line2 {
+  background-color: var(--main-color); /* اللون الرئيسي */
+  width: 18px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+strong {
+  color: var(--main-color);
+}
+
+/* تعديل التاريخ وزر الإغلاق */
+.date-close {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.date-close .date {
+  color: #999;
+  font-size: 12px;
+  /* margin-right: 10px; */
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.date-close .date i {
+  margin-right: 5px;
+  color: var(--main-color);
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.close-btn i {
+  color: var(--main-color);
+  font-size: 14px !important;
+  border: 2px solid var(--border-color);
+  background-color: var(--border-color);
+  border-radius: 50%;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.close-btn i:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+
+/* إعدادات أساسية */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* تصميم الشريط العلوي */
+.secondry-nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.secondry-nav .nav-tit {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* تصميم الإحصائيات */
+.fastStat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* تصميم الأنشطة الأخيرة */
+/* .last-activities {
+  margin-bottom: 20px;
+}
+
+.last-activities h3 {
+  margin-bottom: 10px;
+} */
+
+
+@media (max-width: 768px) {
+.stat{
+  width: 96% !important;
+}
+  .dashboard {
+    max-width: 90% !important;
+    height: 100% !important;
+  }
+  .secondry-nav {
+    flex-direction: row;
+  }
+  .Box {
+    padding: 0 !important;
+  }
+  .Box .Text {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fastStat {
+    flex-direction: column;
+  }
+  .Text.row {
+    padding: 0;
+    margin: 0;
+  }
+  .click {
+    margin: 0 !important;
+  }
+
+  .last-activities {
+    text-align: center;
+  }
+
+  .notification {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification .date-close {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .Box {
+    width: 100%;
+    height: auto;
+  }
+
+  .Box .Text {
+    padding: 10px;
+  }
+
+  .Box p {
+    font-size: 12px !important;
+  }
+
+  .dashboard .Box button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1447px) {
+  .act,.Box{
+
+    width: 100%;
+  }
+  .Text{
+    width: 100%;
+  }
+}

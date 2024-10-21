@@ -1,0 +1,32 @@
+<div class="container">
+  <section class="popular-cities">
+    <h2>Most Popular Cities/Towns</h2>
+    <p>
+      Discover best things to do, restaurants, shopping, hotels, cafes and
+      places <br />around the world by categories.
+    </p>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 categories"
+        *ngFor="let categoryname of categories"
+      >
+        <a class="category" [routerLink]="['/category', categoryname.name]">
+          <img
+            [src]="categoryname.photo"
+            alt="cat-photo"
+            class="img-fluid"
+          />
+          <div class="overlay-place-img"></div>
+
+          <div class="category-info">
+            <h3 class="text-capitalize cat-name">{{ categoryname.name }} </h3>
+            
+            <span class="listings-count">18 Listings</span>
+          </div>
+        </a>
+      </div>
+      <div class="w-100  text-center ">
+      <button class="view-more  "  routerLink="/categories">View Categories</button>
+    </div></div>
+  </section>
+</div>

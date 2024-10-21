@@ -1,0 +1,19 @@
+<!-- start section of community link  -->
+<section class="community d-flex align-items-center justify-content-between  container-fluid flex-wrap"  *ngIf="!logined" >
+  <div class="text"  >
+    <h3>Join Our Community</h3>
+    <p class="m-0">Grow your marketing and be happy with out business</p>
+  </div>
+  <div class="button">
+    <button class="btn" (click)="togglePopupp()"  >Sign Up <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+</section>
+<div class="popup2" [ngClass]="{'show': Open}" *ngIf="!logined" >
+  <!-- زر إغلاق (X) أعلى pop-up -->
+  <button class="close-btn" (click)="togglePopupp()">X</button>
+  
+ 
+  <app-login></app-login>
+</div>
+<!-- end section of community link -->

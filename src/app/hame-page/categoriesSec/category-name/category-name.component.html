@@ -1,0 +1,319 @@
+<div class="category-name-page">
+  <div class="home">
+    <div
+      class="overlay d-flex align-items-center justify-content-center flex-column text-center"
+    >
+      <div class="header-content" *ngIf="currentCategory">
+        <h2 class="title text-capitalize text-white">{{ currentCategory }}</h2>
+        <span class="d-block text-white para"
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+          reiciendis accusamus dolorem!</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <!--* places content -->
+  <div class="categories-content">
+    <div class="container">
+      <!--* breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb sections d-flex align-items-center">
+          <li class="item-breadcrumb">
+            <a
+              routerLink="home"
+              routerLinkActive="active-link"
+              class="breadcrumb-link text-uppercase text-decoration-none text-white"
+              >Home</a
+            >
+          </li>
+          <i class="fa-solid fa-caret-right icon1"></i>
+
+          <li class="item-breadcrumb" aria-current="page">
+            <a
+              class="breadcrumb-link text-uppercase text-decoration-none text-white"
+              >category name</a
+            >
+          </li>
+        </ol>
+      </nav>
+      <!--* places section -->
+      <div class="sections places d-flex p-4">
+        <!--* category-places -->
+
+        <div class="category-places col-lg-7 col-md-7 col-sm-12">
+          <!-- location services  -->
+          <div
+            class="location-services d-flex align-items-center justify-content-between mb-4"
+          >
+            <div class="location-and-num">
+              <span class="text-capitalize me-2">location services:</span>
+             
+            </div>
+            <div class="sorting d-flex align-items-center">
+              <span class="text-capitalize me-4 sort-text">sort by:</span>
+              <div class="sections sort-box">
+                <div
+                  class="select-box d-flex align-items-center justify-content-between"
+                  (click)="toggleClass()"
+                >
+                  <div class="icon-span">
+                    <i class="fa-solid fa-arrow-down-short-wide me-2"></i>
+                    <span>{{ selectedItem }}</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <ul
+                  class="list list-unstyled"
+                  [ngClass]="{ 'active-class': isActive }"
+                >
+                  <li (click)="showItem('Popularity')" class="list-item">
+                    Popularity
+                  </li>
+                  <li (click)="showItem('Latest')" class="list-item">Latest</li>
+                  <li (click)="showItem('Top Ranked')" class="list-item">
+                    Top Ranked
+                  </li>
+                  <li
+                    (click)="showItem('Price: low to high')"
+                    class="list-item"
+                  >
+                    Price: low to high
+                  </li>
+                  <li
+                    (click)="showItem('Price: high to low')"
+                    class="list-item"
+                  >
+                    Price: high to low
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- places list  -->
+          <div class="places-list">
+            <!-- items  -->
+            <ng-container *ngFor="let place of categoryName; let i = index">
+              <div *ngIf="currentSlide === 1" class="place-item d-flex mb-2">
+                <div class="col-lg-6 col-md-6 col-sm-12 place-img">
+                  <img
+                    [src]="place.backgroundImage"
+                    class="place-img"
+                    alt="placeimg"
+                    loading="lazy"
+                  />
+                  <div class="overlay-place-img"></div>
+                  <div class="rate-and-wishHeart d-flex align-items-center">
+                    <div class="rate">{{ place.rating }}</div>
+                    <div class="heart" (click)="toggleHeart(i)"> 
+                      <i
+                        [ngClass]="
+                          heartedStates[i]
+                            ? 'fa-solid fa-heart'
+                            : 'fa-regular fa-heart'
+                        "
+                        [ngStyle]="{
+                          color: heartedStates[i]
+                            ? 'var(--main-color)'
+                            : 'white'
+                        }"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 places-content">
+                  <div class="details d-flex align-items-center justify-content-between">
+                    <h3 class="place-name">{{ place.placeName }}</h3>
+                    <div class="place-img-location">
+                      <img [src]="place.gallery[0]" alt="" />
+                    </div>
+                  </div>
+                  <p class="person-name">{{ place.personName }}</p>
+                  <hr class="hr1" />
+                  <p class="place-desc">{{ place.description }}</p>
+                  <div class="location d-flex align-items-center sections">
+                    <span class="location-icon"><i class="fa-solid fa-map-marker-alt"></i></span>
+                    <span class="location-text">{{ place.address.street }}, {{ place.address.city }}</span>
+                  </div>
+                  <hr class="hr2" />
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <p class="cat-of-service text-capitalize m-0">{{ place.placeType }}</p>
+                    <div class="view-details sections text-center">
+                      <a class="text-decoration-none text-white"  [routerLink]="['/serviceProvider', place._id]"
+                     >view details<i class="fa-solid fa-caret-right icon"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            
+            <div *ngIf="currentSlide === 2" class="place-item d-flex">
+              <!-- first part img  -->
+              <div class="col-lg-6 col-md-6 col-sm-12 place-img">
+                <!-- img  -->
+                <img
+                  src="../../assets/images/AdobeStock_314812340.jpeg"
+                  class="place-img"
+                  alt="placeimg"
+                  loading="lazy"
+                />
+                <!-- overlay  -->
+                <div class="overlay-place-img"></div>
+                <!-- rate & wishlist -->
+                <div class="rate-and-wishHeart d-flex align-items-center">
+                  <div class="rate">9/10</div>
+                  <div class="heart" (click)="toggleHeart(1)">
+                    <!-- مرر الفهرس 1 -->
+                    <i
+                      [ngClass]="
+                        heartedStates[1]
+                          ? 'fa-solid fa-heart'
+                          : 'fa-regular fa-heart'
+                      "
+                      [ngStyle]="{
+                        color: heartedStates[1] ? 'var(--main-color)' : 'white'
+                      }"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <!-- sec part content  -->
+              <div class="col-lg-6 col-md-6 col-sm-12 places-content">
+                <!-- content -->
+                <!-- img & place name  -->
+                <div
+                  class="details d-flex align-items-center justify-content-between"
+                >
+                  <h3 class="place-name">Place Name</h3>
+                  <div class="place-img-location">
+                    <img
+                      src="../../assets/images/wallpaperflare.com_wallpaper.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- cont/content  -->
+                <p class="person-name">Lorem, ipsum dolor.</p>
+                <p class="person-name price">$400</p>
+                <hr class="hr1" />
+                <p class="place-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  euismod, nunc vel laoreet ullamcorper, velit mauris posuere.
+                </p>
+                <!-- location  -->
+                <div class="location d-flex align-items-center sections">
+                  <span class="location-icon"
+                    ><i class="fa-solid fa-map-marker-alt"></i
+                  ></span>
+                  <span class="location-text">location</span>
+                </div>
+                <hr class="hr2" />
+                <!-- card footer  -->
+                <div
+                  class="card-footer d-flex align-items-center justify-content-between"
+                >
+                  <p class="cat-of-service text-capitalize m-0">
+                    category of service
+                  </p>
+                  <div class="view-details sections text-center">
+                    <a class="text-decoration-none text-white">
+                      view details<i class="fa-solid fa-caret-right icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn & load more  -->
+          <div class="btns&load-more mt-4">
+            <div
+              class="btn-toolbar"
+              role="toolbar"
+              aria-label="Toolbar with button groups"
+            >
+              <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="button" (click)="previousSlide()">
+                  <i class="fa-solid fa-caret-left"></i>
+                </button>
+                <button
+                  type="button"
+                  class="button"
+                  [ngClass]="{ coloring: currentSlide === 1 }"
+                  (click)="goToSlide(1)"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  class="button"
+                  [ngClass]="{ coloring: currentSlide === 2 }"
+                  (click)="goToSlide(2)"
+                >
+                  2
+                </button>
+                <button type="button" class="button" (click)="nextSlide()">
+                  <i class="fa-solid fa-caret-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--* categories  -->
+        <div class="categories col-lg-5 col-md-5 col-sm-12 ms-5 ">
+          <div class="cont-categories p-4">
+            <div
+              class="card-start text-capitalize d-flex align-items-center justify-content-between"
+            >
+              <span class="cat-title">categories</span>
+              <div class="lines d-flex align-items-center">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            <hr class="w-100 hr1" />
+            <ul class="list-unstyled">
+              <div class="each3cat d-flex">
+                <a
+                  class="text-capitalize text-decoration-none text-white category-list-item d-inline d-flex align-items-center"
+             >
+                  entertainment
+                </a>
+                <a
+                  class="d-flex align-items-center text-capitalize text-decoration-none text-white category-list-item d-inline"
+                >
+                  educational services
+                </a>
+                <a
+                  class="d-flex align-items-center text-capitalize text-decoration-none text-white category-list-item d-inline"
+                >
+                  industrial services
+                </a>
+              </div>
+              <hr class="w-100 hr3" />
+              <div class="each3cat d-flex">
+                <a
+                  class="d-flex align-items-center text-capitalize text-decoration-none text-white category-list-item d-inline"
+                >
+                  health services
+                </a>
+                <a
+                  class="d-flex align-items-center text-capitalize text-decoration-none text-white category-list-item d-inline"
+                >
+                  hotels
+                </a>
+                <a
+                  class="d-flex align-items-center text-capitalize text-decoration-none text-white category-list-item d-inline"
+                >
+                  tourism services
+                </a>
+              </div>
+              <hr class="w-100 hr3" />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

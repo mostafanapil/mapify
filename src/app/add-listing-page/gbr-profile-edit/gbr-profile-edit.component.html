@@ -1,0 +1,324 @@
+<section class="profile-section" style="max-width: 100%">
+  <!-- the nav bar -->
+
+  <!-- main content box -->
+  <div
+    style="padding: 0"
+    class="text-white gbr-book-list-section container_responsive-width"
+  >
+    <!-- right box -->
+    <div class="profile_edit_box">
+      <div class="profile_edit_box--header">
+        <div class="profile_edit_header">
+          <!-- first element -->
+          <h3 class="profile_edit_header--title text-uppercase">
+            edit your profile
+          </h3>
+
+          <!-- second element -->
+          <div class="profile_edit_header_date">
+            <i class="fa-regular fa-calendar"></i>
+            <p class="profile_edit_header_date-text">22.10.2024</p>
+          </div>
+
+          <!-- third element -->
+          <div class="gbr_btn gbr_btn_header">
+            <p class="text-capitalize me-4">your tariff plan : premuim</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
+      <!-- the upper box -->
+      <div class="profile_edit">
+        <!-- the left box -->
+        <div class="profile_edit_box">
+          <div class="profile_edit_container profile_edit_container--1">
+            <!-- the personal editor header -->
+            <div class="profile_edit_container_header text-uppercase">
+              <h3 class="profile_edit_container_header--text">personal info</h3>
+              <!-- icon -->
+              <span> </span>
+            </div>
+            <!-- the editor form -->
+
+            <form class="profile_edit_form" action="#0" actions="get">
+              <!-- first form control area -->
+              <div class="profile_edit_form_control">
+                <label for="firstName" class="profile_edit_form_control--label">
+                  <i class="fa-regular fa-user"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="first name"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <!-- second form control area -->
+              <div class="profile_edit_form_control">
+                <label
+                  for="secondName"
+                  class="profile_edit_form_control--label"
+                >
+                  <i class="fa-solid fa-user"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="second name"
+                  id="secondName"
+                  placeholder="second Name"
+                  required
+                />
+              </div>
+
+              <!-- third form control area -->
+              <div class="profile_edit_form_control">
+                <label for="emial" class="profile_edit_form_control--label">
+                  <i class="fa-regular fa-envelope"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="email address"
+                  required
+                />
+              </div>
+
+              <!-- forth form control area -->
+              <div class="profile_edit_form_control">
+                <label
+                  for="phoneNumber"
+                  class="profile_edit_form_control--label"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="phone"
+                  required
+                />
+              </div>
+              <!-- text area -->
+              <div class="profile_edit_form_control">
+                <textarea
+                  name="commentArea"
+                  id="commentArea"
+                  class="profile_edit_form_control--input"
+                  rows="4"
+                  placeholder="about text"
+                  style="resize: none"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                class="gbr_btn gbr_btn_form"
+                value="update"
+              />
+            </form>
+          </div>
+        </div>
+
+        <!-- the right box -->
+        <div class="profile_edit_box">
+          <!-- the uploadBox -->
+          <div class="profile_edit_photo-box">
+            <div class="profile_edit_photo-img" *ngFor="let item of name">
+              <img [src]="item.photo" alt="" />
+            </div>
+            <!-- the upload button -->
+
+            <div>
+              <label for="file-upload" class="gbr_btn gbr_btn-upload">
+                upload new photo
+              </label>
+              <input
+                type="file"
+                id="file-upload"
+                name="file"
+                style="display: none"
+              />
+            </div>
+            <!-- the delete button -->
+
+            <button class="gbr_btn gbr_btn-remove">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="profile_edit_container profile_edit_container--2">
+            <!-- the social editor header -->
+            <div class="profile_edit_container_header text-uppercase">
+              <h3 class="profile_edit_container_header--text">
+                your socials links
+              </h3>
+              <!-- icon -->
+              <span> </span>
+            </div>
+            <!-- the social form -->
+
+            <form class="profile_edit_form" action="#0" actions="get">
+              <!-- first form control area -->
+              <div class="profile_edit_form_control">
+                <label
+                  for="facebookLink"
+                  class="profile_edit_form_control--label"
+                >
+                  <i class="fa-regular fab fa-facebook-f"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="facebookLink"
+                  id="facebookLink"
+                  placeholder="facebook"
+                  required
+                />
+              </div>
+              <!-- second form control area -->
+              <div class="profile_edit_form_control">
+                <label for="TikTok" class="profile_edit_form_control--label">
+                  <i class="fa-solid fab fa-tiktok"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="TikTok"
+                  id="TikTok"
+                  placeholder="TikTok"
+                  required
+                />
+              </div>
+
+              <!-- third form control area -->
+              <div class="profile_edit_form_control">
+                <label for="Instagram" class="profile_edit_form_control--label">
+                  <i class="fa-regular fab fa-instagram"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="Instagram"
+                  id="Instagram"
+                  placeholder=" Instagram"
+                  required
+                />
+              </div>
+
+              <!-- forth form control area -->
+              <div class="profile_edit_form_control">
+                <label for="x-twitter" class="profile_edit_form_control--label">
+                  <i class="fa-solid fa-x"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="text"
+                  name="x-twitter"
+                  id="x-twitter"
+                  placeholder="x-twitter"
+                  required
+                />
+              </div>
+
+              <input
+                type="submit"
+                class="gbr_btn gbr_btn_form"
+                value="update"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- the bottom box -->
+      <div class="profile_edit profile_edit--password">
+        <div class="profile_edit_box profile_edit_box--password">
+          <div class="profile_edit_container profile_edit_container--1">
+            <!-- the password editor header -->
+            <div class="profile_edit_container_header text-uppercase">
+              <h3 class="profile_edit_container_header--text">
+                change password
+              </h3>
+              <!-- icon -->
+              <span> </span>
+            </div>
+            <!-- the editor form -->
+
+            <form class="profile_edit_form" action="#0" actions="get">
+              <!-- first form control area -->
+              <div class="profile_edit_form_control">
+                <label
+                  for="currentPassword"
+                  class="profile_edit_form_control--label"
+                >
+                  <i class="fa-regular fas fa-lock-open"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="password"
+                  name="currentPassword"
+                  id="currentPassword"
+                  placeholder="current Password"
+                  required
+                />
+
+                <span class="gbr_btn-eye">
+                  <i class="fa-reqular fas far fa-eye-slash"></i>
+                </span>
+              </div>
+              <!-- second form control area -->
+              <div class="profile_edit_form_control">
+                <label
+                  for="newPassword"
+                  class="profile_edit_form_control--label"
+                >
+                  <i class="fa-solid fa-lock"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="password"
+                  name="newPassword"
+                  id="newPassword"
+                  placeholder="new password"
+                  required
+                />
+                <span class="gbr_btn-eye">
+                  <i class="fa-reqular fas far fa-eye-slash"></i>
+                </span>
+              </div>
+
+              <!-- third form control area -->
+              <div class="profile_edit_form_control">
+                <label for="emial" class="profile_edit_form_control--label">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </label>
+                <input
+                  class="profile_edit_form_control--input"
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  placeholder="confirm password"
+                  required
+                />
+                <span class="gbr_btn-eye">
+                  <i class="fa-reqular fas far fa-eye-slash"></i>
+                </span>
+              </div>
+              <input
+                type="submit"
+                class="gbr_btn gbr_btn_form"
+                value="update"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

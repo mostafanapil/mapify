@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.how-it-works {
+    text-align: center;
+    background-image: url('../../../assets/images/pexels-laura-tancredi-7078666.jpg'); 
+    background-size: cover;
+    background-position: bottom;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    height: 350px;
+}
+
+.overlay-place-img {
+    background-color: rgba(0, 0, 0, 0.651);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    z-index: 0; /* تأكد من أنه أقل من المحتوى */
+    transition: .5s;
+}
+
+.how-it-works-title {
+    position: relative; /* تأكد من وضعه كـ relative */
+    z-index: 1; /* اجعل الـ z-index أعلى من الـ overlay */
+    padding-top: 40px;
+}
+
+.how-it-works h2,
+.how-it-works p {
+    position: relative; /* تأكد من وضعه كـ relative */
+    z-index: 1; /* اجعل الـ z-index أعلى من الـ overlay */
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; /* تأكد من وضعه كـ relative */
+    z-index: 1; /* اجعل الـ z-index أعلى من الـ overlay */
+}
+
+.features i {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.feature {
+    width: 30%;
+    padding: 20px 20px 0px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.find {
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .feature {
+        width: 100%; 
+        margin: 10px 0;
+    }
+    .how-it-works{
+        height: 600px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works h2 {
+        font-size: 28px; 
+    }
+
+    .how-it-works p {
+        font-size: 16px;
+    }
+}

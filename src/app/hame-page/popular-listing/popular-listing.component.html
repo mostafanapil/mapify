@@ -1,0 +1,60 @@
+<section class="all container">
+  <div class="try container d-flex justify-content-between align-items-center">
+    <h4 class="try2">Browse Hot Properties</h4>
+    <div class="try3 d-flex justify-content-end">
+      <div class="property-filter">
+        <button class="filter-btn active" >Popularity</button>
+        <button class="filter-btn" >Top Ranked</button>
+        <button class="filter-btn" > Price</button>
+     
+
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="cards" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="image d-flex row">
+      <div class="image-item col-lg-4 col-md-6 col-sm-12" *ngFor="let item of displayedItems; let i = index">
+        <div class="img">
+          <img [src]="item.backgroundImage" class="photo" [alt]="item.alt">
+          <div class="overlay-place-img"></div>
+        </div>
+        
+        <i class="fa-heart" 
+           [ngClass]="item.isFavorite ? 'fa-solid favorite' : 'fa-regular'" 
+           (click)="toggleFavorite(item)"></i>
+        <div class="d-flex align-items-center star-container">
+          <ng-container *ngFor="let star of item.stars">
+            <i [ngClass]="star"></i>
+          </ng-container>
+        </div>
+        <div class="both d-flex justify-content-between">
+          <p class="title">{{ item.placeName }} <i class="fa-solid fa-circle-check ms-1"></i></p>
+          <img [src]="item.gallery[0]" alt="Provider Icon" class="provider-icon">
+        </div>
+        <p class="provider-name">{{ item.personName }}</p>
+        <p class="text">{{ item.description }}</p>
+        <div class="container1 d-flex align-items-center justify-content-between">
+          <div class="random-number">
+            <i class="fa-solid fa-phone"></i>
+            <span class="number">{{ item.phone }}</span>
+          </div>
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="location-text">{{ item.address.street }}, {{ item.address.city }}</span>
+          </div>
+        </div>
+        <hr>
+        <div class="additional-info-container d-flex align-items-center justify-content-between">
+          <p class="additional-info text-capitalize">{{ item.placeType }}</p>
+          <button class="view-more">View More<i class="fa-solid fa-caret-right icon"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <button class="prev" (click)="prev()" [class.visible]="hovered"><i class="fas fa-caret-left"></i></button>
+    <button class="next" (click)="next()" [class.visible]="hovered"><i class="fas fa-caret-right"></i></button>
+  </div>
+</section>

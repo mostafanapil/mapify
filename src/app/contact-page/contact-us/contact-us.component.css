@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .body {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  background-color: var(--third-bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+/* }  */
+.container {
+  margin: auto;
+  font-family: var(--main-font);
+  width: 83%;
+}
+.sections {
+  background-color: var(--third-bg-color);
+  border: 0.4px solid #eeeeee29 !important;
+  font-family: var(--main-font);
+  color: white;
+}
+.places {
+  border-radius: 10px;
+}
+.card-start {
+  font-size: 15px;
+  font-weight: 500;
+}
+.category-list-item {
+  font-size: 12px;
+  background-color: var(--fourth-bg-color);
+  padding: 5px 12px;
+  margin-right: 4px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.category-list-item:hover {
+  color: var(--main-color) !important;
+}
+.hr3 {
+  color: #eeeeee73 !important;
+  margin: 15px 0;
+}
+.line1,
+.line2 {
+  border-radius: 20px;
+  width: 18px;
+  height: 8px;
+}
+.line1 {
+  background-color: #eeeeee3e;
+  width: 12px;
+}
+.line2 {
+  background-color: var(--main-color);
+}
+
+nav {
+  padding: 0;
+}
+.breadcrumb {
+  font-size: 9px;
+  font-weight: 500;
+  padding: 15px 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.icon1 {
+  color: var(--main-color);
+  margin: 0 18px;
+}
+.padding-box2 {
+  padding-left: 20px;
+ 
+}
+.input-box input {
+  padding: 7px;
+  padding-left: 28px;
+ 
+}
+.input-icon {
+  position: absolute;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  left: 16px;
+  color: var(--main-color) !important;
+}
+.input-box {
+  position: relative;
+  width: 48%;
+}
+::placeholder , .input-box{
+    font-size: 10px;
+    color: var(--text-color);
+}
+.input:focus {
+    background-color: var(--fourth-bg-color) !important;
+}
+.input-box input,
+textarea {
+ width: 100%;
+  border: 0.4px solid #eeeeee29 !important;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+ resize: none;
+}
+textarea{
+    padding: 9px;
+    height: 130px;
+}
+.contact-form {
+    background-color: var(--secondary-bg-color);
+    padding: 20px 30px;
+    padding-bottom: 70px;
+    border-radius: 10px;
+    
+  }
+  .send-btn {
+    padding: 10px 30px;
+    background-color: var(--third-bg-color);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    margin-top: 10px;
+    float: left;
+  border: 0.4px solid #eeeeee29 !important;
+  transition: .5s;
+  }
+  
+  .send-btn:hover {
+    color: var(--main-color);
+    border-radius: 25px;
+  }
+  
+  .footer-icons{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px !important;color: var(--main-color);
+    transition: .5s;
+    background-color: var(--secondary-bg-color);
+    margin-bottom: 18px;
+    border-radius: 5px;
+  }
+  .footer-icons:hover{
+    background-color: var(--fourth-bg-color);
+    border-radius: 50%;
+  }
+  .follow-us{
+    font-size: 11px;
+    color: var(--text-color);
+    margin-bottom: 18px !important    ;
+
+  }
+  .phone-number,
+.email-address {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 18px;
+  color: var(--main-color);
+  font-size: 10px;
+  transition: .5s;
+}
+.phone-number:hover,
+.email-address:hover {
+color: white !important;
+border: 0.4px solid var(--main-color)!important;
+}
+.card-start i {
+  color: var(--fourth-bg-color);
+  background-color: var(--main-color);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: .5s;
+  
+}
+.contact-info {
+  background-color: var(--secondary-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 40px;
+  position: relative;
+}
+.contact-info:hover{
+background-color: var(--fourth-bg-color);
+}
+.contact-info:hover .card-start  i {
+background-color: var(--fourth-bg-color);
+color: var(--main-color);
+border-radius: 50%;
+}
+.contact-info-icon{
+  
+  margin-right: 12px;
+}
+.contact-info-icon::before{
+  content: "";
+position: absolute;
+top: 0px;
+left: 37.5px;
+  width: .2px;
+  height: 37px;
+  background-color:#eeeeee29 ;
+}
+.contact-info-icon::after{
+  content: "";
+  position: absolute;
+bottom: 0px;
+left: 37.5px;
+
+  width: .2px;
+  height: 37px;
+  background-color:#eeeeee29 ;
+}
+.para{
+  font-size: 10px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+/* .info-box {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  height: auto;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  flex: 1;
+}
+
+.info-box:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+.info-box i {
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.info-box div {
+  color: #fff;
+}
+
+.info-box h3 {
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.info-box p {
+  color: #80d4d4;
+  font-size: 12px;
+  margin: 0;
+} */
+
+
+
+@media (max-width: 768px) {
+ 
+.input-box{
+  width: 100% !important;
+}
+.input{
+  margin-bottom: 7px;
+}
+.mail,.phone{
+margin-left: 0;
+width: 100% !important;
+}
+  .input-group {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .info-box {
+    margin-bottom: 10px;
+  }
+
+  .social-media {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .input-box input,
+  .input-box textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .send-btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .info-box i {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .info-box h3 {
+    font-size: 14px;
+  }
+
+  .phone-number,
+  .email-address {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .social-media {
+    top: 10px;
+    right: 10px;
+  }
+
+  .social-media a {
+    padding: 8px;
+    font-size: 16px;
+  }
+}

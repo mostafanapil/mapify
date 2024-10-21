@@ -1,0 +1,79 @@
+
+<section class="container all">
+    <!-- Section for displaying reviews -->
+    <div class="reviews-section">
+      <div class="header d-flex justify-content-between">
+        <span class=" card-title main-title d-flex align-items-center"
+          >{{ reviews.length }} Reviews
+        </span>
+        <div class="lines d-flex align-items-center">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+      
+
+      </div>  <hr class="w-100 hr1" />
+      <!-- Review Item -->
+      <div class="review-item container mb-2" *ngFor="let review of reviews; let i = index">
+        <div class="review-header d-flex align-items-center justify-content-between">
+          <div class="reviewer-info d-flex align-items-center">
+            <img [src]='place.gallery[6+i]' alt="Reviewer Image" class="reviewer-image" loading="lazy">
+            
+            <div class="name-time mt-3">
+              <h6 class="text-name">{{ place.reviews[i].author }}</h6>
+              <div class="stars">
+                <span *ngFor="let star of review.stars">
+                  <i class="fa" [ngClass]="star"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="dropdown">
+            <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-ellipsis-v"></i> 
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Report</a></li>
+              <li><a class="dropdown-item" (click)="deleteReview(i)">Delete</a></li> 
+            </ul>
+          </div>
+  
+          <span class="review-time">3 weeks ago</span>
+        </div>
+      
+        <div class="review-body">
+          <p class="review-text">{{ place.reviews[i].comment }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <hr>
+  
+    <!-- Section for adding a new review -->
+    <div class="add-review-section">
+      <h5 class="text">Rate & Write Reviews</h5>
+      <form (ngSubmit)="submitReview()">
+        <div class="form-group">
+          <!-- Rating Stars -->
+          <div class="stars mb-2 stars2">
+            <i class="fa fa-star" [ngClass]="{'selected': selectedStars >= 1}" (click)="selectStar(1)"></i>
+            <i class="fa fa-star" [ngClass]="{'selected': selectedStars >= 2}" (click)="selectStar(2)"></i>
+            <i class="fa fa-star" [ngClass]="{'selected': selectedStars >= 3}" (click)="selectStar(3)"></i>
+            <i class="fa fa-star" [ngClass]="{'selected': selectedStars >= 4}" (click)="selectStar(4)"></i>
+            <i class="fa fa-star" [ngClass]="{'selected': selectedStars >= 5}" (click)="selectStar(5)"></i>
+          </div>
+          
+          <!-- Input fields with ngModel binding -->
+          <input type="text" class="form-control mb-2" placeholder="Your Name*" [(ngModel)]="newName" name="name" required>
+          <input type="email" class="form-control mb-2" placeholder="Email Address*" [(ngModel)]="newEmail" name="email" required>
+          <textarea class="form-control mb-2" placeholder="Tell us your experience..." [(ngModel)]="newComment" name="comment" required></textarea>
+          
+          <!-- Submit button -->
+          <button type="submit" class="submit-btn btn btn-primary mt-2 ">submit your review</button>
+        </div>
+      </form>
+    </div>
+    
+
+</section>

@@ -1,0 +1,58 @@
+<div class="amenities-section">
+  <!-- Grid System for Amenities -->
+  <div class="row">
+    <h5 class="text-left mt-2">Amenities:</h5>
+    <hr class="firt" />
+
+    <div class="col-md-4" *ngFor="let amenity of amenitiesList">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          [id]="amenity"
+          [value]="amenity"
+          (change)="onCheckboxChange($event)"
+        />
+        <label class="form-check-label" [for]="amenity">{{ amenity }}</label>
+      </div>
+    </div>
+    <div class="opening-hours-section mt-4">
+      <h5 class="text-left">Opening Hours:</h5>
+      <hr />
+      <div
+        *ngFor="let time of openingHoursArray.controls; let i = index"
+        class="row mb-3 align-items-center"
+      >
+        <div class="text-center col-md-2 text-md-right">
+          <label>{{ time.value.day }}:</label>
+        </div>
+        <div class="col-md-5">
+          <select
+            class="form-select"
+            (change)="onOpeningHoursChange(i, $event)"
+          >
+            <option value="" disabled selected>Opening Time</option>
+            <option value="8">8 AM</option>
+            <option value="9">9 AM</option>
+            <option value="10">10 AM</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="col-md-5">
+          <select
+            class="form-select"
+            (change)="onClosingHoursChange(i, $event)"
+          >
+            <option value="" disabled selected>Closing Time</option>
+            <option value="9">9 PM</option>
+            <option value="10">10 PM</option>
+            <option value="11">11 PM</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Opening Hours Section -->
+</div>

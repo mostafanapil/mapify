@@ -1,0 +1,137 @@
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary"
+  [ngClass]="{ 'navbar-scrolled': isScrolled }"
+>
+  <div class="container">
+    <!-- logo  -->
+    <a class="navbar-brand" href="#"
+      ><img class="logo" src="../../assets/images/logo.png" alt=""
+    /></a>
+    <!-- navbar links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="home"
+            routerLinkActive="active-link"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active-link"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="categories"
+            routerLinkActive="active-link"
+            >categories</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="pricing"
+            routerLinkActive="active-link"
+            >pricing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="contacts"
+            routerLinkActive="active-link"
+            >contacts</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- nvbar btns -->
+  <div class="navbar-btns d-flex">
+    <div class="signin">
+      <button type="button" *ngIf="!logined" class="btn any-btn signin-btn" (click)="togglePopupp()">
+        <i class="fa-solid fa-user"></i>
+        <span class="signin-txt" >Sign In</span>
+      </button>
+    </div>
+    <div class="signin">
+      <button type="button" *ngIf="logined" class="btn any-btn signin-btn" (click)="logout()">
+        <i class="fa-solid fa-user"></i>
+        <span class="signin-txt" >Sign out</span>
+      </button>
+    </div>
+    <div class="popup2" [ngClass]="{'show': Open}" *ngIf="!logined">
+      <button class="close-btn" (click)="togglePopupp()">X</button>
+
+      <app-login></app-login>
+    </div>
+
+
+      <div
+        class="wishlist d-flex align-items-center justify-content-center mx-2"
+      >
+        <i class="fa-regular fa-heart"(click)="togglePopup()">
+          <span class="wish-list-items-num">3</span></i
+        >
+      </div>
+      <div class="add-listing">
+        <button
+          type="button"
+          class="btn add-listing-btn any-btn text-uppercase"
+          routerLink="profile/first-add"
+        >
+          <span class="add-listing-txt">add listing</span>
+          <i class="fa-solid fa-plus d-none"></i>
+        </button>
+      </div>
+    
+    <button *ngIf="logined" routerLink="profile/dashboard" class=" text-capitalize profile"> <img src="../../../assets/images/pexels-photo-1043474.webp" class="profile-img" alt="profile"><span class="profile-txt">welcome <span  class="gamal">Gamal</span></span></button>
+    </div>
+   <!-- menu btn  -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon">
+        <div class="lines d-flex flex-column">
+          <span class="line"></span>
+          <span class="line2"></span>
+          <span class="line3"></span></div
+      ></span>
+    </button>
+  </div>
+<!-- البوب أوفر -->
+<div class="popup" [ngClass]="{'show': isOpen}">
+  <div class="popup-content">
+    <span class="close" (click)="togglePopup()">&times;</span>
+    <div class="wishlist-header">
+      <h2>YOUR WISHLIST</h2>
+    </div>
+    <div class="wishlist-middle">
+      <div class="wishlist-content" *ngFor="let item of lists">
+        <div class="wishlist-item">
+          <div class="item-img">
+            <img [src]="item.backgroundImage" alt="">
+          </div>
+          <div class="item-content">
+            <i class="fa-solid fa-trash-can"></i>
+            <h3>{{item.placeName}}</h3>
+            <span>{{item.address.street}},{{item.address.city}}</span>
+            <p>{{item.description}}
+            </p>
+          </div>
+        </div>
+
+    </div>
+    </div>
+  </div>
+</div>

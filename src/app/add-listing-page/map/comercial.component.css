@@ -1,0 +1,143 @@
+:host{
+  width: 100%;
+}
+#map {
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+  z-index: 10;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary-bg-color) !important;
+  border-color: var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border: none !important;
+}
+
+.btn-info {
+  color: var(--main-color);
+  background-color: rgba(0, 0, 0, 0) !important;
+  position: absolute;
+  z-index: 99;
+  right: -9px;
+  box-shadow: none !important;
+  bottom: 3px !important;
+}
+
+.btn-info:hover {
+  background-color: #00b0e8;
+}
+
+.custom-input::placeholder {
+  color: #aaaaaa;
+}
+
+.custom-button {
+  background-color: var(--main-color) !important;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-fill {
+  flex: 1 1 30%;
+  margin-right: 10px;
+}
+
+#startCity {
+  position: relative;
+  width: 50px !important;
+  border: var(--border-color);
+  border-radius: 10px;
+}
+
+input.form-control {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  background-color: var(--third-bg-color);
+  color: #ffffff;
+  height: 50px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+input.form-control::placeholder {
+  color: white;
+  font-size: 13px;
+}
+
+input.form-control:focus {
+  box-shadow: none;
+  border-color: var(--main-color);
+}
+
+.input-group {
+  display: flex !important;
+  flex: 1;
+}
+
+.both {
+  display: flex !important;
+  width: 50% !important;
+  border-radius: 10px !important;
+}
+#addressInput {
+  position: relative;
+}
+.btn2 {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--main-color);
+  font-size: 18px !important;
+  border-radius: 0;
+  border: none !important;
+  z-index: 999;
+}
+.main-container {
+  display: flex;
+  flex-direction: row; /* وضع العناصر بجانب بعض */
+  gap: 20px; /* المسافة بين العناصر */
+}
+
+.form-container {
+  flex: 1; /* تجعل قسم النموذج يحتل مساحة أكبر */
+}
+
+.profileSection {
+  flex: 1; /* تجعل قسم الملف الشخصي يحتل مساحة أكبر */
+}
+.input-group-append {
+  position: relative;
+}
+.fa-location-arrow {
+  position: absolute;
+  top: 15px;
+  right: 20px !important;
+}

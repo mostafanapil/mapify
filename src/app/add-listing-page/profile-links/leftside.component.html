@@ -1,0 +1,86 @@
+<!--! Start Bahaa's Task -->
+<!-- start section of profile  -->
+<div class="profileTask">
+  <section class="profileSection">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          <a class="nav-link" href="#"
+            ><i class="fa-solid fa-caret-right me-3"></i>PROFILE</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <!-- profile nav start -->
+      <div class="profileNav">
+        <ul>
+          <li *ngFor="let item of name">
+            <img
+              [src]="item.photo"
+              alt="random man image"
+              class="rounded d-flex align-items-center"
+            />
+            <div class="align-self-center d-flex justify-content-between w-100">
+              <p class="align-self-center mt-3 ms-3 w-100">
+                WELCOME: <span> {{item.name}}</span>
+              </p>
+              <a routerLink="/profile/profile-edit" class="d-flex align-self-center justify-content-end"
+                ><i class="fa-solid fa-user-pen"></i
+              ></a>
+            </div>
+          </li>
+          <li>
+            <a
+              routerLink="dashboard"
+              routerLinkActive="router-link-active"
+              class="ms-3 d-flex justify-content-between align-items-center"
+              ><span>DASHBOARD</span><i class="fa-solid fa-caret-right me-2"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              routerLink="ads"
+              routerLinkActive="router-link-active"
+              class="ms-3 d-flex justify-content-between align-items-center"
+              ><span>YOUR ADVERITSMENTS</span
+              ><i class="fa-solid fa-caret-right me-2"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              routerLink="first-add"
+              routerLinkActive="router-link-active"
+              class="ms-3 d-flex justify-content-between align-items-center"
+              ><span>ADD NEW LISTING</span
+              ><i class="fa-solid fa-caret-right me-2"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              routerLink="profile-edit"
+              routerLinkActive="router-link-active"
+              class="ms-3 d-flex justify-content-between align-items-center"
+              ><span>EDIT PROFILE</span
+              ><i class="fa-solid fa-caret-right me-2"></i
+            ></a>
+          </li>
+          <li class="logOutLi">
+            <a
+              [routerLink]=""
+              routerLinkActive="router-link-active"
+              class="ms-3 d-flex justify-content-start align-items-center"
+              ><i class="fa-solid fa-right-from-bracket me-3"></i
+              ><span>LOG OUT</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- profile nav end -->
+      <div class="middle-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </section>
+</div>

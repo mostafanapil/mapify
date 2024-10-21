@@ -1,0 +1,119 @@
+<section class="profile-section">
+  <!-- main content box -->
+  <div
+    style="padding: 0"
+    class="text-white gbr-book-list-section container_responsive-width"
+  >
+    <!-- right box -->
+    <div class="advertisement">
+      <div class="advertisement_box--header">
+        <div class="_header align-items-center">
+          <!-- first element -->
+          <h3 class="advertisement_header--title text-uppercase">
+            your advertisement
+          </h3>
+
+          <!-- second element -->
+          <div class="advertisement_header_date">
+            <i class="fa-regular fa-calendar"></i>
+            <p class="advertisement_header_date-text">      22.10.2024
+            </p>
+          </div>
+
+          <!-- third element -->
+          <div class="gbr_btn gbr_btn_header">
+            <p class="text-capitalize me-4">your tariff plan : premuim</p>
+          </div>
+        </div>
+        <!-- the search box -->
+
+        <div class="advertisement_search">
+          <!-- the search bar -->
+          <div class="gbr_search-bar">
+            <input type="text" class="searchbar" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <!-- the right box -->
+          <div class="advertisement_search_sortBox">
+            <!-- sort form -->
+            <div class="advertisement_form">
+              <label for="sort" class="advertisement_form_label"
+                >Sort by:</label
+              >
+              <!-- dropdown menu -->
+              <div class="dropdown">
+                <button
+                  class="gbr_btn-2 dropdown-toggle"
+                  type="button"
+                  data-toggle="dropdown"
+                  style="--clr: #1e2a5e"
+                >
+                  <i class="fa-solid fa-arrow-down-short-wide"></i>
+                  latest
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">nearest</a>
+                  <a class="dropdown-item" href="#">Lowest Price</a>
+                  <a class="dropdown-item" href="#">Higher Price</a>
+                </div>
+              </div>
+              <!-- add button -->
+              <button class="gbr_btn gbr_btn_add" routerLink="/profile/first-add">
+                Add New <span class="u-text-main">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- the list icon -->
+      <ul class="advertisement_list">
+        <!-- first box -->
+
+        <li class="advertisement_list_item-container" *ngFor="let list of lists">
+          <div class="advertisement_list_item">
+            <!-- the img box -->
+            <div class="advertisement_img-box">
+              <img
+                class="advertisement_img"
+                [src]="list.backgroundImage"
+                alt=""
+              />
+            </div>
+
+            <!-- the title box -->
+            <div class="advertisement_list_item-text">
+              <h3 class="text-capitalize">{{list.placeName}}</h3>
+              <p class="u-text-main">{{list.address.street}},{{list.address.city}}</p>
+            </div>
+
+            <!-- the footer -->
+            <div class="advertisement_list_footer">
+              <!-- view box -->
+              <div class="advertisement_list_footer-view">
+                
+                <span class="advertisement_list_footer-view-text"
+                  >{{list.placeType}}</span
+                >
+              </div>
+
+              <!-- right box -->
+              <div class="advertisement_list_footer-icons ">
+                <button class="gbr-btn advertisement_list_footer-btn">
+                  <i class="fa-solid fa-file-pen"></i>
+                </button>
+                <button class="gbr-btn advertisement_list_footer-btn">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- first box -->
+
+
+      </ul>
+    </div>
+  </div>
+</section>

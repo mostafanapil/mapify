@@ -1,0 +1,212 @@
+<div *ngIf="place">
+<div class="profile-container">
+  <img
+  [src]="place.backgroundImage"
+  alt="bg-img"
+  class="bg-img"
+  loading="lazy"
+/> 
+  <div class="overlay-profile"></div>
+
+  <div
+    class="container little-info d-flex align-items-center justify-content-between"
+  >
+    <div class="service-provider d-flex align-items-center">
+      <div class="service-provider-img">
+        <img
+          [src]="place.personImage"
+          alt="person-img"
+          class="person-img"
+          loading="lazy"
+        />
+      </div>
+      <div class="service-provider-details">
+        <p class="name m-0">{{place.personName}}</p>
+        <p class="role m-0">{{place.personJob}}</p>
+      </div>
+    </div>
+    <div class="profile-actions d-flex gap-2">
+      <button class="rate btn-profile">{{place.rating}}</button>
+      <button class="add-review-btn btn-profile">Add review</button>
+      <button class="bookmark-btn btn-profile">Bookmark</button>
+    </div>
+  </div>
+</div>
+
+<div class="container sec-section">
+  <div class="sections places p-5 row">
+    <div class="padding-box1 col-lg-8 col-md-8 col-sm-12">
+      <div class="main-content">
+        <div class="header d-flex justify-content-between">
+          <span class="card-title main-title d-flex align-items-center"
+            >{{place.placeName}}
+            <p class="text-capitalize category">{{place.placeType}}</p>
+          </span>
+          <div class="lines d-flex align-items-center">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+        <hr class="w-100 hr1" />
+
+        <div class="information">
+          <p>
+            <i class="fas fa-map-marker-alt my-2"></i> {{place.address.street}}, {{place.address.city}}
+          </p>
+          <p class="rate-num"><i class="fas fa-star"></i> {{place.rating}}</p>
+        </div>
+
+        <div class="overview mt-4 p-0">
+          <div class="header d-flex justify-content-between">
+            <span class="card-title main-title">Overview</span>
+            <div class="lines d-flex align-items-center">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </div>
+          <hr class="w-100 hr1" />
+          <p class="para mt-3">
+         {{place.description}}
+          </p>
+          <p class="para">
+            Similique Sunt In Culpa Qui Officia Deserunt Mollitia Animi, Id Est
+            Laborum Et Dolorum Fuga, Et Harum Quidem Rerum Facilis Est Et
+            Explicabo Distinctio.
+          </p>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+        </div>
+
+        <div class="amenities">
+          <div class="header d-flex justify-content-between">
+            <span class="card-title main-title">Amenities</span>
+            <div class="lines d-flex align-items-center">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </div>
+          <hr class="w-100 hr1" />
+
+<div class="amenities-list row mt-3">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[0]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[1]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i>{{place.services[2]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i>{{place.services[3]}}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[4]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[5]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[6]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[7]}}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[8]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[9]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[10]}}
+              </div>
+              <div class="amenity-item">
+                <i class="fas fa-check-square"></i> {{place.services[11]}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-map-section *ngIf="place"></app-map-section>
+      <div class="sections places img-slider">
+  
+<app-profile-img-slider></app-profile-img-slider>
+
+<app-reviews></app-reviews>
+    </div>
+    
+    </div>
+    <div class="padding-box2 col-lg-4 col-md-4 col-sm-12">
+      <div class="sidebar">
+        <div class="opening-hours">
+          <div class="header d-flex justify-content-between">
+            <span class="card-title">Opening Hours </span>
+            <div class="lines d-flex align-items-center">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </div>
+          <hr class="w-100 hr1" />
+
+          <ul class="list-unstyled">
+            <li><span>Saturday</span> <span>{{place.openingHours.Saturday}}</span></li>
+            <hr class="w-100 hr" />
+            <li><span>Sunday</span> <span>{{place.openingHours.Sunday}}</span></li>
+            <hr class="w-100 hr" />  
+            <li><span>Monday</span><span> {{place.openingHours.Monday}}</span></li>
+            <hr class="w-100 hr" />
+            <li><span>Tuesday</span><span> {{place.openingHours.Tuesday}}</span></li>
+            <hr class="w-100 hr" />
+            <li><span>Wednesday</span><span>  {{place.openingHours.Wednesday}}</span></li>
+            <hr class="w-100 hr" />
+            <li><span>Thursday</span><span>  {{place.openingHours.Thursday}}</span></li>
+            <hr class="w-100 hr" />
+            <li><span>Friday</span><span>  {{place.openingHours.Friday}}</span></li>
+
+</ul>
+        </div>
+        <div class="location">
+          <div class="header d-flex justify-content-between">
+            <span class="card-title">Location</span>
+            <div class="lines d-flex align-items-center">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </div>
+          <hr class="w-100 hr1" />
+          <div class="location-items">
+            <p>
+              <i class="fas fa-map-marker-alt location-icon"></i>{{place.address.street}}, {{place.address.city}}
+            </p>
+            <p>
+              <i class="fas fa-phone-alt location-icon"></i>{{place.phone}}
+            </p>
+            <p>
+              <i class="fas fa-envelope location-icon"></i>
+              {{place.email}}
+            </p>
+          </div>
+          <div class="social-media mt-3 d-flex flex-column">
+            <p class="share text-capitalize">share listing:</p>
+            <div class="social-icons d-flex align-items-center">
+              <a [href]="place.socialMedia.google" class="text-decoration-none">  <i class="fab fa-google-plus-g"></i>   </a>
+              <a [href]="place.socialMedia.facebook" class="text-decoration-none">  <i class="fab fa-facebook-f"></i></a> 
+              <a [href]="place.socialMedia.twitter" class="text-decoration-none"> <i class="fab fa-twitter"></i></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,149 @@
+<app-start-of-contact></app-start-of-contact>
+<div class="container">
+  <!--* breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb sections d-flex align-items-center">
+      <li class="item-breadcrumb">
+        <a
+          routerLink="/home"
+          routerLinkActive="active-link"
+          class="breadcrumb-link text-uppercase text-decoration-none text-white"
+          >Home</a
+        >
+      </li>
+      <i class="fa-solid fa-caret-right icon1"></i>
+
+      <li class="item-breadcrumb" aria-current="page">
+        <a
+        routerLink="/contacts"
+          class="breadcrumb-link text-uppercase text-decoration-none text-white"
+          >contact us</a
+        >
+      </li>
+    </ol>
+  </nav>
+  <!--* get-in-touch -->
+  <div class="row sections places p-4 mb-5">
+    <div class="d-flex justify-content-end align-items-center c-info follow">
+      <p class="m-0 follow-us text-uppercase">Find us on</p>
+      <div class="socialMedia ms-4 gap-1 d-flex align-items-center">
+        <a href="#" class="text-decoration-none"
+          ><i class="fa-brands fa-facebook-f footer-icons"></i
+        ></a>
+        <a href="#" class="text-decoration-none"
+          ><i class="fab fa-twitter footer-icons"></i
+        ></a>
+        <a href="#" class="text-decoration-none"
+          ><i class="fab fa-instagram footer-icons"></i
+        ></a>
+        <a href="#" class="text-decoration-none"
+          ><i class="fab fa-youtube footer-icons"></i
+        ></a>
+        <a href="#" class="text-decoration-none"
+          ><i class="fa-brands fa-google-plus-g footer-icons"></i
+        ></a>
+        <a href="#" class="text-decoration-none"
+          ><i class="fa-brands fa-pinterest-p footer-icons"></i
+        ></a>
+      </div>
+    </div>
+    <div class="padding-box1 col-lg-6 col-md-6 col-sm-12">
+      <div class="contact-form sections">
+        <div
+          class="card-start text-capitalize d-flex align-items-center justify-content-between"
+        >
+          <span class="cat-title">get in touch</span>
+          <div class="lines d-flex align-items-center">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+        <hr class="w-100 hr3" />
+        <form>
+          <div
+            class="input-group d-flex align-items-center justify-content-between mb-3"
+          >
+            <div class="input-box">
+              <i class="fas fa-user input-icon"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                class="sections input"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <i class="fas fa-envelope input-icon"></i>
+              <input
+                type="email"
+                id="email"
+                name="email "
+                placeholder="Email Address *"
+                class="sections input"
+                required
+              />
+            </div>
+          </div>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            class="sections input"
+            required
+          ></textarea>
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="padding-box2  col-lg-6 col-md-6 col-sm-12">
+      <div class="contact-info mb-4 mt-3 sections phone">
+        <div class="card-start text-capitalize d-flex align-items-center">
+          <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="phone-text w-100">
+            <div class="d-flex justify-content-between">
+              <!-- title  -->
+              <span class="cat-title">our phone</span>
+              <!-- lines -->
+              <div class="lines d-flex align-items-center">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            <p class="para">For any inquiries or support, feel free to contact us:
+            </p>
+
+            <p class="phone-number sections">+20 100 123 4567
+            </p>
+            <p class="phone-number sections">+20 200 987 6543
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info sections mail">
+        <div class="card-start text-capitalize d-flex align-items-center">
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="mail-text w-100">
+            <div class="d-flex justify-content-between">
+              <!-- title  -->
+              <span class="cat-title">our mail</span>
+              <!-- lines -->
+              <div class="lines d-flex align-items-center">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            <p class="para">For any inquiries or assistance, reach us at:
+            </p>
+
+            <p class="email-address sections">infomapify.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

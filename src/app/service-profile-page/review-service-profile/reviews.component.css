@@ -1,0 +1,280 @@
+body {
+    background-color: var(--third-bg-color) !important; /* تعيين لون خلفية الصفحة */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color:var(--secondary-bg-color); 
+    color: white !important;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.reviews-section {
+    /* padding: 20px; */
+    border-radius: 10px;
+    /* margin-bottom: 30px; */
+}
+
+.review-item {
+    padding: 30px ;
+    background-color: #111111;
+
+}
+
+
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.name-time {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر بين الاسم والوقت */
+    width: 100%; /* تأكد من أن العناصر تأخذ المساحة الكاملة */
+}
+.text{
+    color: var(--main-color);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.name-time h6 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.review-time {
+    color: #999;
+    font-size: 13px !important;
+    text-align: right;
+}
+
+.stars {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+
+}
+
+.stars i {
+    color: var(--main-color);
+    margin-right: 5px;
+}
+
+.review-body {
+    margin-top: 10px;
+}
+
+.review-text {
+    margin: 0;
+    
+}
+
+.add-review-section {
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var( --border-color);
+    border-radius: 5px;
+    background-color: var(--third-bg-color);
+    box-shadow: none;
+    color: white;
+    font-size: 14px;
+    
+}
+::placeholder{
+    color: white;
+    font-size: 12px !important;
+}
+.form-control:focus{
+    background-color: var(--fourth-bg-color);
+}
+
+textarea.form-control {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: var(--main-color);
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 500; 
+    letter-spacing: .5px;
+    box-shadow: none;
+}
+
+.submit-btn:hover {
+ background-color: #08b1a0a4;
+
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.comment {
+    margin: 5px 0;
+}
+
+.time-ago {
+    color: #777;
+    font-size: 0.8em;   
+}
+
+.stars2 .fa-star {
+    color: lightgray;
+    cursor: pointer;
+}
+
+.stars .fa-star.selected {
+    color: var(--main-color);
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* توزيع العناصر بين اليمين واليسار */
+    width: 100%;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-image {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover !important;
+}
+
+.name-time {
+    display: flex;
+    flex-direction: column; /* ترتيب الاسم والنجوم عمودياً */
+}
+
+.stars {
+    display: flex;
+    margin-top: 5px; /* مسافة صغيرة بين الاسم والنجوم */
+}
+
+.review-time {
+    color: #999;
+    font-size: 0.85rem;
+    text-align: right;
+    white-space: nowrap; /* منع الوقت من التكسير على سطرين */
+}
+.review-item {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+  }
+  
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    color: white !important;
+    background-color: #000 !important;
+
+
+  }
+  
+  .dropdown-toggle:hover {
+    color: #000;
+   
+  }
+  
+  .dropdown-menu {
+    min-width: 100px;
+
+    background-color: #000 !important;
+  }
+  
+  .dropdown-menu-end {
+    right: 0;
+    left: auto;
+  }
+.btn{
+    color: var(--main-color);
+}
+.dropdown-item{
+    color: white !important;
+}
+.dropdown-item:hover{
+
+ background-color: #000 !important;
+ color: var(--main-color) !important;
+}
+.line1,
+.line2 {
+  border-radius: 20px;
+  width: 18px;
+  height: 8px;
+}
+.line1 {
+  background-color: #eeeeee3e;
+  width: 12px;
+}
+.line2 {
+  background-color: var(--main-color);
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+.hr1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #eeeeee73 !important;
+}
+.text-name{
+    font-size: 15px;
+}

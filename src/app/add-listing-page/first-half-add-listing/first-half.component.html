@@ -1,0 +1,157 @@
+<!--! Start Bahaa's Task -->
+<!-- start section of profile  -->
+<div class="profileTask">
+  <section class="profileSection container_responsive-width">
+    <div class="content">
+
+      <!-- profile nav end -->
+      <div class="middle-content">
+        <div class="contact-nav">
+          <span>Add Propperty</span>
+          <p id="date"></p>
+          <button id="popoverButton" class="popover-button text-capitalize">
+            your tariff plan : premuim
+          </button>
+          
+        </div>
+        <div
+          class="general-information-container information-containers h-auto"
+        >
+          <h2 class="inf-h2">GENERAL INFORMATION</h2>
+          <form class="form-information col-lg-12">
+            <div class="row gen-input">
+              <div class="col-md-6 col-ms-12 ps-0">
+                <input
+                  type="text"
+                  placeholder="Listing Title"
+                  class="form-control  mb-3"
+                />
+                <input
+                  type="text"
+                  placeholder="Keyword"
+                  class="form-control mb-3"
+                />
+              </div>
+              <div class="col-md-6 col-ms-12 pr-0">
+                <input
+                  type="text"
+                  placeholder="Place Type"
+                  class="form-control mb-3"
+                />
+                <div class="dropdown">
+                  <button
+                    class="btn gen-dropdown-button btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Category
+                  </button>
+                  <ul class="dropdown-menu dropdown-gen">
+                    <li>
+                      <a class="dropdown-item" href="#">Educational Services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">tourism services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">health services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">industrial services</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="full-details-container information-containers h-auto">
+          <h2 class="inf-h2">FULL DETAILS</h2>
+          <form class="form-information">
+            <div class="row gen-input">
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="text"
+                  placeholder="Owner Name"
+                  class="form-control mb-3"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="form-control mb-3"
+                />
+              </div>
+
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="tel"
+                  placeholder="Phone"
+                  class="form-control mb-3"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="url"
+                  placeholder="Facebook Link"
+                  class="form-control mb-3"
+                />
+              </div>
+
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="url"
+                  placeholder="Twitter Link"
+                  class="form-control mb-3"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <input
+                  type="url"
+                  placeholder="Google Link"
+                  class="form-control mb-3"
+                />
+              </div>
+
+              <div class="col-md-12 col-sm-12">
+                <input
+                  type="text"
+                  placeholder="Description"
+                  class="form-control mb-3 des-input"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="service-containers">
+          <h2 class="inf-h2">SERVICE MEDIA</h2>
+          <div class="service-container">
+            <div class="gallery">
+              <span>Gallery</span>
+              <label for="gallery-input-id" class="gallery-input">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span> Click here or drop files to upload</span>
+              </label>
+              <input type="file" id="gallery-input-id" class="d-none" />
+            </div>
+
+            <div class="background-images">
+              <span>background Images For Services</span>
+
+              <label for="bg-img-input-id" class="gallery-input">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span> Click here or drop files to upload</span>
+              </label>
+              <input type="file" id="bg-img-input-id" class="d-none" />
+            </div>
+          </div>
+        </div>
+        <app-comercial></app-comercial>
+        <app-all-properties></app-all-properties>
+      </div>
+    </div>
+  </section>
+</div>

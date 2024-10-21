@@ -1,0 +1,130 @@
+.community {
+  background-color: var(--main-color);
+  padding:40px 120px !important;
+  -webkit-box-shadow: 0 0 10px var(--border-color);
+          box-shadow: 0 0 10px var(--border-color);
+  color: var(--text-color); 
+  margin-top: 20px;
+}
+
+.community h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: var(--main-font);
+}
+
+.community p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: var(--main-font);
+}
+
+.community .button{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.community button {
+  background-color: rgba(0, 0, 0, .25);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--main-font);
+
+  border-radius: 30px;
+}
+
+.community button:hover{
+  background-color: rgba(0, 0, 0, .4);
+  color: var(--text-color) !important;
+}
+/* end community section style */
+.popup2 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.666) !important; /* خلفية معتمة */
+  display: none !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10 !important;
+  padding: 10px !important; /* Adding padding to handle small screen edge spacing */
+}
+
+.popup2.show {
+  display: flex !important;
+}
+
+/* Popup content area */
+
+/* Styling for the close button (X) */
+.close-btn {
+  position: absolute !important;
+  top: 65px !important;
+  right: 15px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 24px !important;
+  color: var(--text-color) !important;
+  cursor: pointer !important;
+  transition: color 0.3s ease !important; 
+  z-index: 10000000000 !important;/* إضافة تأثير الانتقال */
+}
+
+/* Close button on hover */
+.close-btn:hover {
+  color: black !important;
+}
+
+
+/* Responsive media queries */
+
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+.popup2 {
+  max-width: 100% !important; /* Reduce max width for smaller screens */
+}
+.close-btn {
+  font-size: 22px; /* Slightly smaller close button */
+}
+}
+
+
+/* Phones */
+@media (max-width: 480px) {
+.popup-content {
+  
+  padding: 15px; /* Reduce padding on smaller devices */
+  border-radius: 8px; /* Smaller border radius */
+}
+.close-btn {
+  font-size: 20px; /* Smaller close button */
+  top: 10px;
+  right: 10px;
+}
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+.popup-content {
+  max-width: 95%;
+  padding: 10px;
+}
+.close-btn {
+  font-size: 18px;
+}
+}
