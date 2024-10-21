@@ -31,15 +31,16 @@ export class ReviewsComponent {
   
    
   
-    ngOnInit() {
+ ngOnInit() {
       this.placeId = this.route.snapshot.paramMap.get('id');
-      console.log(this.placeId);
-  
+      console.log('Place ID:', this.placeId);
+
       this.dataService.getpage(this.placeId).subscribe((data) => {
         this.place = data;
-        console.log(this.place);
+        console.log('Place Data:', this.place); 
       });
     }
+  
   
 
   isBrowser(): boolean {
