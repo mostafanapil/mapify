@@ -39,7 +39,9 @@
         <div class="container1 d-flex align-items-center justify-content-between">
           <div class="random-number">
             <i class="fa-solid fa-phone"></i>
-            <span class="number">{{ item.phone }}</span>
+            <a [href]="'tel:' + item.phone" class="number" style="text-decoration: none; color: inherit;">
+              {{ item.phone }}
+            </a>
           </div>
           <div class="location">
             <i class="fa-solid fa-location-dot"></i>
