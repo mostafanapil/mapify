@@ -41,8 +41,9 @@ ngOnInit(): void {
       this.categories = data;
       console.log("Categories: ", this.categories);
 
-      this.currentCategory = this.categories.find(category => category === wordOfPath);
-      console.log("Current Category: ", this.currentCategory);
+        this.currentCategory = this.categories.find(category => 
+        category.name.toLowerCase() === wordOfPath.toLowerCase()
+      );
     });
   });
 }
