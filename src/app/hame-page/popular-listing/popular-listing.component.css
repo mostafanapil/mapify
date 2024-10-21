@@ -623,3 +623,6 @@ object-fit: cover;
     font-size: 12px !important;
 }
 }
+.next,.prev{
+    font-size: 12px !important;
+}
