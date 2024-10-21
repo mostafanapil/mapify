@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ComercialComponent } from '../map/comercial.component';
 import { AllPropertiesComponent } from '../sec-half-add-listing/all-properties.component';
 import { DataService } from '../../data.service';
-import { RouterLink, RouterLinkActive, RouterLinkWithHref, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterLinkWithHref, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 declare var bootstrap: any;
 @Component({
@@ -14,17 +14,25 @@ declare var bootstrap: any;
 })
 //////////////////////////////////////////
 export class LeftsideComponent implements OnInit {
+  logined: any;
+
+  constructor(private _DataService: DataService, private _Router: Router) {}
+
+  logout() {
+    localStorage.removeItem('isLoggedIn');
+    this._DataService.islogined.next(false); 
+    this._Router.navigate(['/login']); 
+  }
 
   getCurrentDate(): string {
     const today = new Date();
     const day = today.getDate();
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
-    return `${day}-${month}-${year}`;
+  return `${day}-${month}-${year} ` ;
   }
 
   name: any[] = [];
-  constructor(private _DataService: DataService) {}
 
   displayDate(): void {
     const dateElement = document.getElementById("date");
@@ -40,6 +48,7 @@ export class LeftsideComponent implements OnInit {
 
     })
     this.displayDate();
+    
 
     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
     const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
